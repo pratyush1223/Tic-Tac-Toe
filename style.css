@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+ 
+  background-image: url("background.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  opacity: 0.9;
+}
+
+/* Navbar links */
+#navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5em;
+}
+
+.logo {
+  
+  width: 60px;
+  height: 60px;
+}
+
+.tic-tac {
+  font-size: 2.5em;
+  position: relative;
+  top: 10px;
+  color: white;
+}
+table,
+tr,
+td {
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
+  background-color: rgb(177, 103, 103);
+  border: 3px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 0.25em;
+  font-size: 1.15em;
+  opacity:0.9;
+}
+
+.current-player {
+  text-align: center;
+  margin-bottom: 0.25em;
+  font-size: 2em;
+}
+
+.display-player {
+  color: black;
+}
+
+.winning-player {
+  text-align: center;
+  margin: 0.25em;
+  font-size: 2em;
+}
+
+.turn-X {
+  color: rgb(215, 16, 16);
+}
+
+.turn-O {
+  color:black;
+}
+
+.draw {
+  color: lavender;
+}
+
+.win {
+  background-color: #748e5c;
+  color: #d24d4d;
+  transition: all 500ms ease;
+}
+
+.cell {
+  font-size: 2.5em;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.btn--new {
+  background-color: rgba(46, 43, 212, 0.626);
+  border: solid #fff;
+  border-radius: 24px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 0.5em;
+  width: 250px;
+  height: 50px;
+  font-size: 1em;
+  margin-bottom: 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+}
+.btn--new:hover{
+  transform: translateY(15px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  background-color: orangered;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  padding: 1em;
+  text-align: center;
+  color: rgb(209, 204, 204);
+  font-size: 1em;
+  position: absolute;
+  
+}
+
+footer p {
+  width: 100vw;
+}
+
+footer p a {
+  text-decoration: none;
+  color: aqua;
+}
+
+
+/* Media queries */
+
+@media (max-width: 800px) {
+  .cell {
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+  }
+  .btn--new {
+    width: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+  }
+  .btn--new {
+    width: 255px;
+  }
+  .tic-tac {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 400px) {
+  .cell {
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+  }
+  .btn--new {
+    width: 225px;
+  }
+  .tic-tac {
+    font-size: 2em;
+    top: 10px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+}
